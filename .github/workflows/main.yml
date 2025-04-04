@@ -4,9 +4,9 @@ name: Fetch Seoul Weather Data Per 5m
 on:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_ dispatch:
+  workflow_dispatch:
 jobs: 
-  fetch_ weather_seoul_5m:
+  fetch_weather_seoul_5m:
     runs-on: ubuntu-latest
 
 
@@ -22,7 +22,7 @@ jobs:
           python-version: "3.9"
           
       - name: 필요한 패키지 설치
-        runs: pip install requests
+        run: pip install requests
 
       - name: 날씨 데이터 가져오기
         env:
